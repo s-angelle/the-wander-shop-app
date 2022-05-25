@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const method = require('method-override');
 const app = express('express');
 const PORT = 3001;
-const Adventure = require('./models/adventure');
+const Adventure = require('./models/adventure.js');
 
 // === Connection to Database ===
 

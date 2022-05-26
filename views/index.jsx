@@ -1,32 +1,45 @@
-const React = require('react');
-
+const React = require("react");
+const DefaultLayout = require("./layout/DefaultLayout");
 
 class Index extends React.Component {
-  render() { 
-      const { adventures } = this.props;
-      return (
-        <>
-        <nav>
-          <a href='/adventures/new'>Create A New Adventure</a>
-        </nav>
-        <h1>Adventures Index Page</h1>
-        <ul>
-           {
-                                  
-             adventures.map((adventure, index)=> {
-               return (
+  render() {
+    const { adventures } = this.props;
+    return (
+      <DefaultLayout title="Index of Adventures">
+        <div>
+          <nav>
+            <a href="/adventures/new">Create A New Adventure</a>
+          </nav>
+
+          <ul>
+            {adventures.map((adventure) => {
+              return (
                 <>
-                  <li key={index}><a href={`/adventures/${index}`}>{adventure.title}</a></li>
-                  <p>{adventure.price}</p>
+                  
+                  <li key={adventure._id}>
+                  <a href={`/adventures/${adventure._id}`}><img src={adventure.image}></img></a>
+                    <a href={`/adventures/${adventure._id}`}>
+                      {adventure.title}
+                    </a>
+                    <p>{adventure.price}</p>
+                  <button>
+                  <form
+                    action={`/adventures/${adventure._id}?_method=DELETE`}
+                    method="POST"
+                  >
+                  <input type="submit" value="DELETE" />
+                  </form>
+                    <a href={`/adventures/${adventure._id}/edit`}>Edit</a>
+                  </button>
+                  </li>
                 </>
-               )
-             })
-            
-           }
-        </ul>
-        </>
-      );
+              );
+            })}
+          </ul>
+        </div>
+      </DefaultLayout>
+    );
   }
-} 
+}
 
 module.exports = Index;

@@ -1,12 +1,13 @@
 const React = require('react');
 const DefaultLayout = require("./layout/DefaultLayout");
 
-class New extends React.Component {
+class Edit extends React.Component {
   render() {
+    const adventure = this.props.adventure;
     return (
-     <DefaultLayout title="Create Your Own Adventure">
-               <form action="/adventures" method="POST">
-                 <label htmlFor='image'>Image:</label>
+     <DefaultLayout title="Edit Adventure">
+               <form action={`/adventures/${adventure._id}?_method=PUT`} method='POST'>
+               <label htmlFor='image'>Image:</label>
                  <input type="text" id='image' name="image" />
                  <label htmlFor='title'>Title:</label>
                  <input type="text" id='title' name="title" />
@@ -23,4 +24,4 @@ class New extends React.Component {
   }
 }
 
-module.exports = New;
+module.exports = Edit;

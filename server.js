@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const method = require('method-override');
 const app = express();
 const PORT = 3001;
 const Adventure = require('./models/Adventure');
@@ -19,6 +20,8 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 // === SET UP MIDDLEWARE ===
+app.use(method('_method'));
+app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
 
 // PARSING JSON
@@ -28,9 +31,7 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-//  
+ 
 // INDEX
 app.get('/adventures', (req, res) => {
     Adventure.find({}, (err, allAdventures ) => {
@@ -46,10 +47,25 @@ app.get('/adventures/new', (req, res) => {
 });
 
 // DELETE
+app.delete('/adventures/:id', (req, res) => {
+    Adventure.findByIdAndDelete(req.params.id, (err) => {
+        if(!err){
+            res.status(200).redirect('/adventures');
+        } else {
+            res.status(400).json(err);
+        }
+    });
+});
 
 // UPDATE
 app.put('/adventures/:id', (req, res) => {
-
+    Adventure.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedAdventure) => {
+        if(!err){
+            res.status(200).redirect('/adventures');
+        } else {
+            res.status(400).json(err)
+        }
+    });
 });
 
 // CREATE
@@ -63,14 +79,20 @@ app.post('/adventures', (req, res) => {
 
 // EDIT
 app.get('/adventures/:id/edit', (req, res) => {
-    
+    Adventure.findById(req.params.id, (err, foundAdventure) => {
+        if(!err){
+            res.render('Edit', {adventure: foundAdventure});
+        } else {
+            res.status.apply(400).json(err);
+        }
+    });
 });
 
 // SHOW
 
 app.get('/adventures/:id', (req, res) => {
     Adventure.findById(req.params.id, (err, foundAdventure) => {
-        res.render('Show', {adventures: foundAdventure});
+        res.render('Show', {adventure: foundAdventure});
     });
     // res.render('Show', {adventure: adventures[req.params.indexOfAdventuresArray]});
 });

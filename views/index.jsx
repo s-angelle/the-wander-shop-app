@@ -5,12 +5,8 @@ class Index extends React.Component {
   render() {
     const { adventures } = this.props;
     return (
-      <DefaultLayout title="Index of Adventures">
+      <DefaultLayout title="Check Out Our Adventures">
         <div>
-          <nav>
-            <a href="/adventures/new">Create A New Adventure</a>
-          </nav>
-
           <ul>
             {adventures.map((adventure) => {
               return (

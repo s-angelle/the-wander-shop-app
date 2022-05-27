@@ -1,8 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
 body {
-    background-color: teal;
+    background-color:#f0e8d5;
+    /* font-family: 'Shadows Into Light'; */
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1em;
+}
+
+nav ul{
+    /* position: fixed; */
+    background-color: #142f5c;
+    color:#f7edd5;
+    border-radius: 1rem;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 24%;
+    list-style: none;
+   justify-content: right;
+    text-align: right;
+    padding:2.2rem;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color:inherit;
+}
+
+a:hover{
+    background: #ddd;
+    color: black;
+    border-radius: 1rem;
+}
+
+#company-logo{
+    position:fixed;
+    top:0.5%;
+    left:1%;
+    /* height: 4.75rem;
+    width: 6.7rem; */
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px 2px;
+}
+
+#default-header{
+    margin-left: 35%;
+    margin-right: 30%;
+    margin-top: 4%;
 }
 
 img{
-    height:100px;
-    width:100px;
+    height:200px;
+    width:200px;
 }

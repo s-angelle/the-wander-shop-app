@@ -15,7 +15,7 @@ class Index extends React.Component {
                   <a href={`/adventures/${adventure._id}`}><img src={adventure.image}></img></a>
                     <a href={`/adventures/${adventure._id}`}>
                       <p>{adventure.title}</p>
-                      <p>{adventure.price}</p>
+                      <p>$ {adventure.price}</p>
                     </a>
                     </li>
                   {/* <button>

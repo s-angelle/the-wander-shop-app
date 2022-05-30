@@ -5,16 +5,16 @@ const DefaultLayout = require("./layout/DefaultLayout");
         render() { 
           const { adventure } = this.props
             return (
-              <DefaultLayout title="Adventures Show Page">
+              <DefaultLayout title="About This Adventure">
                 <div id="show-page-div">
                 <div id='show-image-div'>
                 <img id='show-page-image'src={adventure.image}></img>
               <h2> {adventure.title} </h2>
-              <p> {adventure.price} </p>
+              <p> $ {adventure.price}</p>
               <p>Currently in stock: {adventure.stock}</p>
-                  <button><a href={`/adventures/${adventure._id}/edit`} >Edit</a></button>
+                  <button><a href={`/adventures/${adventure._id}/edit`} >Edit </a></button>|
               <button>Buy</button>
-              <form action={`/adventures/${adventure._id}?_method=DELETE`} method="POST">
+              <form id='delete-button'action={`/adventures/${adventure._id}?_method=DELETE`} method="POST">
                     <input type="submit" value="DELETE"/>
                   </form>
               </div>

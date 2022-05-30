@@ -13,7 +13,7 @@ body {
     /* font-family: 'Shadows Into Light'; */
     font-family: 'Permanent Marker', cursive;
     font-size: 1em;
-    border: solid black;
+    color:#142f5c;
 }
 
 nav ul{
@@ -72,9 +72,9 @@ a, a:visited, a:active {
 }
 
 #default-header{
-    margin-left: 35%;
-    margin-right: 30%;
-    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
 }
  .zoom-box {
     transition: transform .3s; /* Animation */
@@ -184,4 +184,69 @@ footer{
 #show-page-button{
 display: flex;
 justify-content: center;
+}
+
+button,
+form input{
+    background: #e6dcc5;
+    color: #142f5c;
+    border-radius: .5em;
+    border: transparent;
+}
+
+button:hover,
+form input:hover {
+    background:#142f5c;
+    color: #e6dcc5;
+    border-radius: .5em;
+    border: transparent;
+}
+
+
+/* label, input {
+    display:block;
+} */
+
+#new-page-div{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    margin-bottom: 28em;
+    /* margin-top: 2%; */
+    padding:2rem;
+    /* margin-left: 20%; */
+
+}
+
+#adventure-button{
+    display: flex;
+    justify-content: center;
+    margin-left: 1%;
+}
+
+#adventure-button input{
+    margin-top: 3rem;
+    background:#142f5c;
+    color: #e6dcc5;
+    border-radius: .5em;
+    border: transparent;
+}
+
+ #description-div {
+    /* height: 6rem; */
+    display: flex;
+    justify-content: center;
+    border-top: 5%;
+   margin-top: 3rem;
+} 
+
+#description-div textarea{
+    height:10rem;
+    width:20rem;
+    background: #e6dcc5;
+    color: #142f5c;
+    border-radius: .5em;
+    border:transparent;
+    margin-right: 6.5%;
 }

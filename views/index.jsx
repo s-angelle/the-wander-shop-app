@@ -10,15 +10,15 @@ class Index extends React.Component {
           <ul>
             {adventures.map((adventure) => {
               return (
-                <>
-                  
-                  <li key={adventure._id}>
+                <div className="zoom-box" id='index-list'>
+                  <li key={adventure._id} >
                   <a href={`/adventures/${adventure._id}`}><img src={adventure.image}></img></a>
                     <a href={`/adventures/${adventure._id}`}>
-                      {adventure.title}
+                      <p>{adventure.title}</p>
+                      <p>{adventure.price}</p>
                     </a>
-                    <p>{adventure.price}</p>
-                  <button>
+                    </li>
+                  {/* <button>
                   <form
                     action={`/adventures/${adventure._id}?_method=DELETE`}
                     method="POST"
@@ -26,9 +26,9 @@ class Index extends React.Component {
                   <input type="submit" value="DELETE" />
                   </form>
                     <a href={`/adventures/${adventure._id}/edit`}>Edit</a>
-                  </button>
-                  </li>
-                </>
+                  </button> */}
+                  {/* </li> */}
+                </div>
               );
             })}
           </ul>

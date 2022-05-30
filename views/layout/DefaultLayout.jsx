@@ -13,20 +13,34 @@ class DefaultLayout extends React.Component {
         </head>
         <body>
           <nav>
-           <ul>
+           <ul id='nav-bar'>
              <li><a href="/adventures/new">Create A New Adventure</a></li>
              <li><a>Mission Statement</a></li>
              <li><a>Reviews</a></li>
              <li><a>Contact Us</a></li>
            </ul>
           </nav>
-             <img id='company-logo' src={'/images/Wander-Shop-Co.png'}></img>
+             <a href='/adventures' ><img id='company-logo' src={'/images/Wander-Shop-Co.png'}></img></a>
              <div id='default-header'>
           <h1>{this.props.title}</h1>
           </div>
-          <div id='default-body'>
           {this.props.children}
-          </div>
+          <footer>
+             <a href='#'>
+             <div id="back-to-top">
+               Back To Top
+               </div>
+             </a>
+            
+           <div id='default-footer'>
+              <ul>
+             <li><a href="/adventures/new">Reviews</a></li>
+             <li><a>Contact Us</a></li>
+             <li>	&copy; 2022 The Wander Shop Co.</li>
+           </ul>
+           </div>
+
+          </footer>
         </body>
       </html>
     )

@@ -3,7 +3,7 @@ const DefaultLayout = require("./layout/DefaultLayout");
 
 class Edit extends React.Component {
   render() {
-    const adventure = this.props.adventure;
+    const { adventure } = this.props;
     return (
       <DefaultLayout title="Edit Adventure">
         <div id="new-page-div">
@@ -34,7 +34,7 @@ class Edit extends React.Component {
               ></textarea>
             </div>
             <div id="adventure-button">
-              <input type="submit" value="Create Adventure" />
+              <input type="submit" value="Update Adventure" />
             </div>
           </form>
         </div>

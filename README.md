@@ -1,4 +1,4 @@
-Welcome to The Wander Shop where adventures become wild, extreme, and super fun!
+### Welcome to The Wander Shop where adventures become wild, extreme, and super fun!
 
 This website is my first completed CRUD application for my imaginary company: The Wander Shop Co. Here are the routes I utilized :
 

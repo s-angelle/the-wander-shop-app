@@ -16,7 +16,7 @@ DELETE | /adventures/new | show page for selected adventure |
 GET | /about | render about page 
 GET | /contact-page | render contact page 
 
-Project Goals:
+### Project Goals:
 
 1. Index Page
 
@@ -60,7 +60,7 @@ Project Goals:
 
 
 
-Areas of Improvement:
+### Areas of Improvement:
 
 1. Enable the updated route to redirect back to the product's show page, instead of the index.
 

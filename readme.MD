@@ -20,8 +20,8 @@ This website is my first completed CRUD application for my imaginary company: Th
 
 1. Index Page
 
-- The app should have an index page where all products are displayed.
-- Product images must link to the product's show page where there should be a link to add a new product.
+   - The app should have an index page where all products are displayed.
+   - Product images must link to the product's show page where there should be a link to add a new product.
 
 2. Show Page
 
@@ -40,9 +40,9 @@ This website is my first completed CRUD application for my imaginary company: Th
 
 5. Technical Requirements
 
-- The app MUST run without syntax errors.
-- Must contain all 7 Restful Routes.
-- Must be styled and look like a store.
+   - The app MUST run without syntax errors.
+   - Must contain all 7 Restful Routes.
+   - Must be styled and look like a store.
 
 #### Areas of Improvement:
 

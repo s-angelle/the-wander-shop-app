@@ -25,10 +25,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // PARSING JSON
 app.use(express.json());
-app.use((req, res, next) => {
-  console.log("I run for all the routes.");
-  next();
-});
 
 // INDEX
 app.get("/adventures", (req, res) => {

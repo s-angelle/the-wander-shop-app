@@ -15,7 +15,6 @@ mongoose.connect(process.env.MONGO_URL, {
 mongoose.connection.once("open", () => console.log("Connected to Mongo"));
 
 // === SET UP VIEW ENGINE ===
-app.set ('views', __dirname + '/views');
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 

@@ -8,6 +8,6 @@ const adventureSchema = new mongoose.Schema({
   stock: { type: Number },
 });
 
-const Adventure = mongoose.model("Adventure", adventureSchema);
+const Adventure = mongoose.model("adventure", adventureSchema);
 
 module.exports = Adventure;

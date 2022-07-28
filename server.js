@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const method = require("method-override");
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 const Adventure = require("./models/Adventure");
 
 // === CONNECTION TO DATABASE ===

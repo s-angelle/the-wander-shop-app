@@ -30,7 +30,7 @@ This website is my first completed CRUD application for my imaginary company: Th
 
 3. New & Edit Page
 
-   - These views should render forms and submit to the appropriate routes.
+   - These views should render forms and submit to the appropriate routes
 
 4. Redirects
 

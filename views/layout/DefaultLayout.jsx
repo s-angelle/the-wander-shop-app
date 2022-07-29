@@ -33,7 +33,7 @@ class DefaultLayout extends React.Component {
             </ul>
           </nav>
           <a href="/adventures">
-            <img id="company-logo" src={"./images/Wander-Shop-Co.png"}></img>
+            <img id="company-logo" src={"../../images/Wander-Shop-Co.png"}></img>
           </a>
           <div id="default-header">
             <h1>{this.props.title}</h1>

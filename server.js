@@ -3,7 +3,6 @@ const express = require('express');
 const { connect, connection } = require('mongoose');
 const method = require('method-override');
 const app = express();
-const path = require('path');
 const PORT = process.env.PORT || 3000;
 const Adventure = require('./models/Adventure');
 
@@ -14,9 +13,6 @@ connect(process.env.MONGO_URI, {
 });
 
 connection.once('open', () => console.log('Connected to Mongo'));
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
 
 // === SET UP VIEW ENGINE ===
 app.set('view engine', 'jsx');

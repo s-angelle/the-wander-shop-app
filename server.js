@@ -3,7 +3,6 @@ const express = require('express');
 const { connect, connection } = require('mongoose');
 const method = require('method-override');
 const app = express();
-const path = require('path');
 const PORT = process.env.PORT || 3000;
 const Adventure = require('./models/Adventure');
 
@@ -21,8 +20,8 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 // === SET UP MIDDLEWARE ===
 app.use(method('_method'));
-app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 
 // PARSING JSON
 app.use(express.json());

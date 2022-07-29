@@ -8,7 +8,7 @@ class About extends React.Component {
       <DefaultLayout title="Who We Are">
         <div id="about-page-div">
           <div id="about-image-div">
-            <img id="about-page-image" src={"/images/Who-We-Are.png"}></img>
+            {/* <img id="about-page-image" src={"/images/Who-We-Are.png"}></img> */}
           </div>
           <div id="intro-div">
             <p>
